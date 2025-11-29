@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PAYPER — S.O. para Gastronomía y Café</title>
+    <meta name="description" content="Sistema operativo integral para cafeterías y gastronomía. Flujo, control de stock y KDS.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+            },
+            colors: {
+              brand: '#C9A66B',      // Gold Dust
+              forest: '#1E362D',     // Forest Noir
+              bone: '#F7F6F2',       // Bone White
+              charcoal: '#1A1A1A',   // Charcoal
+              white: '#FFFFFF',      // Pure White
+              // Retaining 'dark' mapped to forest for legacy compatibility if needed, but prefer explicit use
+              dark: '#1E362D',
+            },
+            animation: {
+              'float-slow': 'float-slow 6s ease-in-out infinite',
+              'float-reverse': 'float-reverse 7s ease-in-out infinite',
+              'glow': 'pulse-glow 8s ease-in-out infinite',
+              'flow-subtle': 'flow-subtle 2.5s linear infinite',
+              'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+              'scroll': 'scroll 40s linear infinite',
+              'scan': 'scan 3s ease-in-out infinite',
+              'ping-slow': 'ping 3s cubic-bezier(0, 0, 0.2, 1) infinite',
+            },
+            keyframes: {
+              'float-slow': {
+                '0%, 100%': { transform: 'translateY(0px) rotateX(0deg)' },
+                '50%': { transform: 'translateY(-10px) rotateX(2deg)' },
+              },
+              'float-reverse': {
+                '0%, 100%': { transform: 'translateY(0px)' },
+                '50%': { transform: 'translateY(6px)' },
+              },
+              'pulse-glow': {
+                '0%, 100%': { opacity: '0.3', transform: 'scale(1)' },
+                '50%': { opacity: '0.5', transform: 'scale(1.05)' },
+              },
+              'flow-subtle': {
+                '0%': { transform: 'translateX(-100%)' },
+                '100%': { transform: 'translateX(100%)' },
+              },
+              'scroll': {
+                '0%': { transform: 'translateX(0)' },
+                '100%': { transform: 'translateX(-50%)' },
+              },
+              'scan': {
+                '0%, 100%': { transform: 'translateY(-10%)', opacity: '0' },
+                '10%, 90%': { opacity: '1' },
+                '50%': { transform: 'translateY(120%)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      /* Custom utility for hiding scrollbars */
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+      
+      .bg-dot-pattern {
+        background-image: radial-gradient(rgba(247, 246, 242, 0.15) 1px, transparent 1px);
+        background-size: 24px 24px;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-[#1E362D] text-[#F7F6F2] antialiased selection:bg-[#C9A66B] selection:text-[#1E362D]">
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
