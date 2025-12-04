@@ -163,12 +163,12 @@ const Hero: React.FC = () => {
         <div className="relative rounded-xl border border-bone/[0.08] bg-charcoal shadow-2xl overflow-visible">
           <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-bone/10 to-transparent opacity-50"></div>
           
-          <div ref={containerRef} className="pt-20 pb-16 md:pt-40 md:pb-28 relative flex justify-center items-center overflow-x-auto no-scrollbar scroll-smooth">
+          <div ref={containerRef} className="pt-12 pb-10 md:pt-40 md:pb-28 relative flex justify-center items-center overflow-x-auto no-scrollbar scroll-smooth">
             {/* Soft Vignettes */}
             <div className="absolute left-0 top-0 bottom-0 w-6 md:w-12 bg-gradient-to-r from-charcoal to-transparent z-20 pointer-events-none"></div>
             <div className="absolute right-0 top-0 bottom-0 w-6 md:w-12 bg-gradient-to-l from-charcoal to-transparent z-20 pointer-events-none"></div>
 
-            <div className="flex items-center gap-4 md:gap-8 min-w-max px-4 pt-4"> {/* Changed px-12 to px-4 */}
+            <div className="flex items-center gap-3 md:gap-8 min-w-max px-4 pt-4">
               
               {STEPS.map((step, index) => {
                 const Icon = step.icon;
@@ -182,8 +182,8 @@ const Hero: React.FC = () => {
                       onMouseEnter={(e) => handleMouseEnter(e, step.id)}
                       onMouseLeave={handleMouseLeave}
                     >
-                      <div className={`w-14 h-14 rounded-xl bg-forest border border-bone/[0.08] flex items-center justify-center shadow-lg transition-all duration-500 z-10 relative ${isHovered ? getColorClasses(step.color, 'border') + ' bg-forest/80 ' + getColorClasses(step.color, 'shadow') : 'group-hover:border-bone/20'}`}>
-                        <Icon className={`w-[18px] h-[18px] text-bone/40 transition-colors duration-300 ${isHovered ? getColorClasses(step.color, 'text') : ''}`} />
+                      <div className={`w-10 h-10 rounded-xl bg-forest border border-bone/[0.08] flex items-center justify-center shadow-lg transition-all duration-500 z-10 relative ${isHovered ? getColorClasses(step.color, 'border') + ' bg-forest/80 ' + getColorClasses(step.color, 'shadow') : 'group-hover:border-bone/20'}`}>
+                        <Icon className={`w-4 h-4 text-bone/40 transition-colors duration-300 ${isHovered ? getColorClasses(step.color, 'text') : ''}`} />
                       </div>
                       <span className={`text-[10px] tracking-[0.2em] uppercase font-medium transition-colors ${isHovered ? 'text-white' : 'text-bone/20'}`}>
                         {step.title}
@@ -192,7 +192,7 @@ const Hero: React.FC = () => {
 
                     {/* CONNECTOR LINE (if not last) */}
                     {index < STEPS.length - 1 && (
-                      <div className="h-px w-6 md:w-10 lg:w-20 bg-bone/[0.04] relative overflow-hidden"> {/* Adjusted width */}
+                      <div className="h-px w-4 md:w-10 lg:w-20 bg-bone/[0.04] relative overflow-hidden">
                         <div 
                           className={`absolute inset-0 bg-gradient-to-r w-full -translate-x-full animate-flow-subtle ${step.gradient}`} 
                           style={{ animationDelay: `${step.delay}s` }}
