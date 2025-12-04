@@ -1,4 +1,3 @@
-
 import React, { useState, useRef } from 'react';
 import { 
   ArrowRight, 
@@ -116,12 +115,12 @@ const Hero: React.FC = () => {
 
       <div className="relative max-w-5xl mx-auto px-6 text-center z-10">
         <RevealOnScroll delay={100}>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-bone/[0.08] bg-white/[0.02] text-bone text-[10px] font-medium mb-10 backdrop-blur-md hover:border-brand/30 transition-all cursor-default shadow-[0_0_30px_-10px_rgba(0,0,0,0.5)] group mx-auto">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-bone/[0.05] bg-white/[0.02] text-bone text-[10px] font-medium mb-10 backdrop-blur-md hover:border-brand/30 transition-all cursor-default shadow-none group mx-auto">
             <span className="relative flex h-1.5 w-1.5">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand opacity-75"></span>
               <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-brand"></span>
             </span>
-            <span className="tracking-wider uppercase bg-gradient-to-r from-bone/90 to-bone/50 bg-clip-text text-transparent group-hover:to-white transition-all">
+            <span className="tracking-wider uppercase bg-gradient-to-r from-bone/60 to-bone/30 bg-clip-text text-transparent group-hover:to-white transition-all">
               SOLUCIÓN INTEGRAL PARA GASTRONOMÍA
             </span>
           </div>
@@ -246,7 +245,7 @@ const Hero: React.FC = () => {
              return (
                <div key={step.id}>
                   <div className="flex items-center gap-2 mb-2">
-                    <div className={`w-1.5 h-1.5 rounded-full ${getColorClasses(step.color, 'bg')}`}></div>
+                    <div className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: step.color === 'brand' ? '#C9A66B' : step.color === 'white' ? '#FFFFFF' : step.color === 'blue-400' ? '#60A5FA' : step.color === 'emerald-400' ? '#34D399' : '#C9A66B' }}></div>
                     <span className={`text-[10px] font-bold uppercase tracking-widest ${getColorClasses(step.color, 'text')}`}>
                       {step.label}
                     </span>
