@@ -127,13 +127,13 @@ const Hero: React.FC = () => {
         </RevealOnScroll>
         
         <RevealOnScroll delay={200}>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-medium text-bone tracking-tight mb-8 leading-[1.05] md:leading-[0.95]">
+          <h1 className="text-5xl md:text-7xl lg:text-8xl font-normal text-bone/80 tracking-tight mb-8 leading-[1.05] md:leading-[0.95]">
             El flujo perfecto para tu <br /> 
             <span className="relative inline-block">
-              <span className="text-transparent bg-clip-text bg-gradient-to-b from-bone via-bone/90 to-bone/40 relative z-10">
+              <span className="text-transparent bg-clip-text bg-gradient-to-b from-bone/80 via-bone/70 to-bone/30 relative z-10">
                 barra de café.
               </span>
-              <span className="absolute inset-0 bg-gradient-to-r from-brand/0 via-brand/10 to-brand/0 blur-3xl -z-10 opacity-40 transform scale-y-50 translate-y-4"></span>
+              <span className="absolute inset-0 bg-gradient-to-r from-brand/0 via-brand/10 to-brand/0 blur-3xl -z-10 opacity-20 transform scale-y-50 translate-y-4"></span>
             </span>
           </h1>
         </RevealOnScroll>
