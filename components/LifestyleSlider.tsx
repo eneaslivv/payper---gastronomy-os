@@ -12,15 +12,15 @@ const images = [
   { src: "https://images.unsplash.com/photo-1566737236500-c8ac43014a67?q=80&w=600&auto=format&fit=crop", loc: "Main Stage", time: "02:20" },
   { src: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=600&auto=format&fit=crop", loc: "Entrance", time: "21:10" },
   { src: "https://images.unsplash.com/photo-1556740758-90de374c12ad?q=80&w=600&auto=format&fit=crop", loc: "Checkout", time: "14:45" },
-  // Nuevas imágenes añadidas (usar URLs reales al subir)
-  { src: "https://via.placeholder.com/600x900/1E362D/F7F6F2?text=Cocktail", loc: "The Mix", time: "22:15" }, // pasted-image-2025-12-04T03-25-14-643Z.png
-  { src: "https://via.placeholder.com/600x900/1E362D/F7F6F2?text=Girl+with+Drink", loc: "Night Out", time: "00:45" }, // DSC04329.JPG
-  { src: "https://via.placeholder.com/600x900/1E362D/F7F6F2?text=Receipt+Hand", loc: "After Hours", time: "01:30" }, // DSC04319.jpg
-  { src: "https://via.placeholder.com/600x900/1E362D/F7F6F2?text=Group+Friends", loc: "Terrace", time: "20:00" }, // DSC04365.jpg
-  { src: "https://via.placeholder.com/600x900/1E362D/F7F6F2?text=Scanning+QR", loc: "Restroom", time: "23:00" }, // DSC04339.jpg
-  { src: "https://via.placeholder.com/600x900/1E362D/F7F6F2?text=Table+QR", loc: "Table 7", time: "21:40" }, // CEA288BF-9B2B-4A42-A0AC-3773D6017048.jpg
-  { src: "https://via.placeholder.com/600x900/1E362D/F7F6F2?text=Friends+Receipts", loc: "Lounge", time: "22:55" }, // DSC04316.jpg
-  { src: "https://via.placeholder.com/600x900/1E362D/F7F6F2?text=Multiple+Receipts", loc: "Bar Counter", time: "00:10" }, // DSC04307.jpg
+  // Nuevas imágenes añadidas con URLs de Unsplash
+  { src: "https://images.unsplash.com/photo-1506126279912-a856b3830786?q=80&w=600&auto=format&fit=crop", loc: "The Mix", time: "22:15" }, 
+  { src: "https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?q=80&w=600&auto=format&fit=crop", loc: "Night Out", time: "00:45" }, 
+  { src: "https://images.unsplash.com/photo-1556742044-3c52d6e88a4d?q=80&w=600&auto=format&fit=crop", loc: "After Hours", time: "01:30" }, 
+  { src: "https://images.unsplash.com/photo-1517487881594-2787fef5ee4f?q=80&w=600&auto=format&fit=crop", loc: "Terrace", time: "20:00" }, 
+  { src: "https://images.unsplash.com/photo-1611974789858-af222e853d4f?q=80&w=600&auto=format&fit=crop", loc: "Restroom", time: "23:00" }, 
+  { src: "https://images.unsplash.com/photo-1587573089084-211128121111?q=80&w=600&auto=format&fit=crop", loc: "Table 7", time: "21:40" }, 
+  { src: "https://images.unsplash.com/photo-1556740714-a8395b3be656?q=80&w=600&auto=format&fit=crop", loc: "Lounge", time: "22:55" }, 
+  { src: "https://images.unsplash.com/photo-1556740734-a284151a3035?q=80&w=600&auto=format&fit=crop", loc: "Bar Counter", time: "00:10" }, 
 ];
 
 const LifestyleSlider: React.FC = () => {
