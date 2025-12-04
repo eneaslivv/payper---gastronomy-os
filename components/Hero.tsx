@@ -79,7 +79,7 @@ const Hero: React.FC = () => {
     const rect = e.currentTarget.getBoundingClientRect();
     // Calculate position: Centered horizontally above the element
     setTooltipPos({
-      top: rect.top, // We will subtract height in CSS
+      top: rect.top - 16, // 16px gap
       left: rect.left + (rect.width / 2)
     });
     setActiveTooltip(stepId);
@@ -115,12 +115,12 @@ const Hero: React.FC = () => {
 
       <div className="relative max-w-5xl mx-auto px-6 text-center z-10">
         <RevealOnScroll delay={100}>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-bone/[0.05] bg-white/[0.02] text-bone text-[10px] font-medium mb-10 backdrop-blur-md hover:border-brand/30 transition-all cursor-default shadow-none group mx-auto">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-bone/[0.03] bg-white/[0.01] text-bone text-[10px] font-medium mb-10 backdrop-blur-md hover:border-brand/30 transition-all cursor-default shadow-none group mx-auto">
             <span className="relative flex h-1.5 w-1.5">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand opacity-75"></span>
               <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-brand"></span>
             </span>
-            <span className="tracking-wider uppercase bg-gradient-to-r from-bone/60 to-bone/30 bg-clip-text text-transparent group-hover:to-white transition-all">
+            <span className="tracking-wider uppercase bg-gradient-to-r from-bone/40 to-bone/20 bg-clip-text text-transparent group-hover:to-white transition-all">
               SOLUCIÓN INTEGRAL PARA GASTRONOMÍA
             </span>
           </div>
