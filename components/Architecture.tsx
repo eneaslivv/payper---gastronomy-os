@@ -5,17 +5,18 @@ import RevealOnScroll from './RevealOnScroll';
 
 const Architecture: React.FC = () => {
   return (
-    <section id="soluciones" className="py-32 bg-bone relative z-20 text-forest">
-      <div className="max-w-7xl mx-auto px-6">
+    <section id="soluciones" className="py-32 lg:py-40 bg-bone relative z-20 text-forest">
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-forest/[0.02] blur-[100px] rounded-full pointer-events-none"></div>
+      <div className="max-w-7xl mx-auto px-6 relative">
         <div className="max-w-2xl mb-20">
           <RevealOnScroll>
             <h2 className="text-3xl md:text-5xl font-medium tracking-tight text-forest mb-6">
-              Escalabilidad real.
+              Payper escala con tu negocio.
             </h2>
           </RevealOnScroll>
           <RevealOnScroll delay={100}>
             <p className="text-lg text-forest/60 font-light leading-relaxed">
-              Ya seas una ventana de café al paso o una franquicia en expansión, Payper se adapta a tu volumen.
+              Ya seas una ventana de café al paso o una franquicia en expansión, el software gastronómico de Payper se adapta a tu volumen.
             </p>
           </RevealOnScroll>
         </div>
@@ -104,7 +105,7 @@ const Architecture: React.FC = () => {
                 <div className="w-10 h-10 bg-bone rounded-lg border border-stone-100 flex items-center justify-center mb-6 shadow-sm text-brand group-hover:scale-110 transition-transform duration-500">
                   <Zap className="w-5 h-5" />
                 </div>
-                <h3 className="text-xl font-medium text-forest mb-2 tracking-tight">Coffee Shops</h3>
+                <h3 className="text-xl font-medium text-forest mb-2 tracking-tight">Cafeterías de Especialidad</h3>
                 <p className="text-sm text-forest/60 leading-relaxed font-light">
                   Velocidad pura. Un sistema que "no se cuelga" y funciona 100% Offline si se corta internet.
                 </p>

@@ -5,17 +5,18 @@ import { ArrowRight } from 'lucide-react';
 
 const Modules: React.FC = () => {
   return (
-    <section id="modulos" className="py-32 bg-charcoal relative border-t border-white/[0.06] overflow-hidden">
+    <section id="modulos" className="py-32 lg:py-40 bg-charcoal relative border-t border-white/[0.06] overflow-hidden">
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-gradient-to-b from-white/[0.01] to-transparent pointer-events-none"></div>
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-[radial-gradient(circle,rgba(201,166,107,0.06)_0%,transparent_60%)] blur-[80px] rounded-full pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div>
             <RevealOnScroll>
-              <h2 className="text-3xl md:text-4xl font-medium text-bone tracking-tight mb-4">Tu ecosistema operativo.</h2>
+              <h2 className="text-3xl md:text-5xl font-medium text-bone tracking-tight mb-4">El ecosistema operativo de Payper.</h2>
             </RevealOnScroll>
             <RevealOnScroll delay={100}>
-              <p className="text-bone/50 text-lg font-light max-w-xl">Todo conectado. Desde que el cliente pide hasta que se descuenta el gramo de café.</p>
+              <p className="text-bone/50 text-lg font-light max-w-xl">Todo conectado en payper.io. Desde que el cliente pide hasta que se descuenta el gramo de café.</p>
             </RevealOnScroll>
           </div>
         </div>
@@ -49,8 +50,8 @@ const Modules: React.FC = () => {
                   </g>
                 </svg>
               </div>
-              <div className="p-6 relative z-10 bg-forest flex-1">
-                <h3 className="text-base font-medium text-bone/90 mb-2">Smart POS Ultra-Rápido</h3>
+              <div className="p-6 pb-7 relative z-10 bg-forest flex-1">
+                <h3 className="text-sm font-semibold text-bone/90 mb-2 tracking-wide uppercase">Smart POS Ultra-Rápido</h3>
                 <p className="text-sm text-bone/40 leading-relaxed font-light">Interfaz limpia diseñada para minimizar los clics. Cobrá, dividí cuentas y aplicá descuentos en segundos.</p>
               </div>
             </div>
@@ -88,8 +89,8 @@ const Modules: React.FC = () => {
                   <circle cx="105" cy="30" r="2" fill="#C9A66B" className="animate-pulse" />
                 </svg>
               </div>
-              <div className="p-6 relative z-10 bg-forest flex-1">
-                <h3 className="text-base font-medium text-bone/90 mb-2">KDS Barista Flow</h3>
+              <div className="p-6 pb-7 relative z-10 bg-forest flex-1">
+                <h3 className="text-sm font-semibold text-bone/90 mb-2 tracking-wide uppercase">KDS Barista Flow</h3>
                 <p className="text-sm text-bone/40 leading-relaxed font-light">Pantalla de despacho en la máquina de espresso. Organiza por orden de llegada y leches especiales. Cero papel.</p>
               </div>
             </div>
@@ -159,8 +160,8 @@ const Modules: React.FC = () => {
                   
                 </svg>
               </div>
-              <div className="p-6 relative z-10 bg-forest flex-1">
-                <h3 className="text-base font-medium text-bone/90 mb-2">Stock por Receta</h3>
+              <div className="p-6 pb-7 relative z-10 bg-forest flex-1">
+                <h3 className="text-sm font-semibold text-bone/90 mb-2 tracking-wide uppercase">Stock por Receta</h3>
                 <p className="text-sm text-bone/40 leading-relaxed font-light">El sistema descuenta automáticamente los gramos de café y mililitros de leche con cada ticket.</p>
               </div>
             </div>
@@ -188,8 +189,8 @@ const Modules: React.FC = () => {
                   <circle cx="50" cy="100" r="2" fill="#F7F6F2" opacity="0.4" className="animate-pulse" style={{animationDelay: '1s'}} />
                 </svg>
               </div>
-              <div className="p-6 relative z-10 bg-forest flex-1">
-                <h3 className="text-base font-medium text-bone/90 mb-2">Control de Personal</h3>
+              <div className="p-6 pb-7 relative z-10 bg-forest flex-1">
+                <h3 className="text-sm font-semibold text-bone/90 mb-2 tracking-wide uppercase">Control de Personal</h3>
                 <p className="text-sm text-bone/40 leading-relaxed font-light">Gestioná turnos, permisos de caja y visualizá quién vende más (o quién cancela más tickets) en tiempo real.</p>
               </div>
             </div>
@@ -216,8 +217,8 @@ const Modules: React.FC = () => {
                   <rect x="65" y="25" width="70" height="90" rx="8" stroke="#F7F6F2" strokeWidth="0.5" strokeOpacity="0.3" fill="none" />
                 </svg>
               </div>
-              <div className="p-6 relative z-10 bg-forest flex-1">
-                <h3 className="text-base font-medium text-bone/90 mb-2">Take-Away &amp; QR</h3>
+              <div className="p-6 pb-7 relative z-10 bg-forest flex-1">
+                <h3 className="text-sm font-semibold text-bone/90 mb-2 tracking-wide uppercase">Take-Away &amp; QR</h3>
                 <p className="text-sm text-bone/40 leading-relaxed font-light">Permití que tus clientes pidan desde la mesa o anticipen su pedido para llevar sin hacer fila y sin descargar Apps.</p>
               </div>
             </div>
@@ -254,8 +255,8 @@ const Modules: React.FC = () => {
                   <line x1="115" y1="30" x2="135" y2="30" stroke="#C9A66B" strokeWidth="1" />
                 </svg>
               </div>
-              <div className="p-6 relative z-10 bg-forest flex-1">
-                <h3 className="text-base font-medium text-bone/90 mb-2">Métricas de Negocio</h3>
+              <div className="p-6 pb-7 relative z-10 bg-forest flex-1">
+                <h3 className="text-sm font-semibold text-bone/90 mb-2 tracking-wide uppercase">Métricas de Negocio</h3>
                 <p className="text-sm text-bone/40 leading-relaxed font-light">Panel de control en vivo: Ticket promedio, productos estrella, horarios de mayor venta y cierre de caja automático.</p>
               </div>
             </div>
@@ -264,8 +265,8 @@ const Modules: React.FC = () => {
         </div>
         
         <RevealOnScroll delay={800} className="flex justify-center mt-12">
-            <button className="group px-8 py-3 rounded-full border border-bone/10 bg-white/5 hover:bg-white/10 hover:border-brand/40 text-bone/80 hover:text-white transition-all duration-300 text-sm font-medium flex items-center gap-2">
-                Explore all features
+            <button className="group h-12 px-8 rounded-full border border-bone/10 bg-white/[0.04] hover:bg-white/[0.08] hover:border-brand/30 text-bone/70 hover:text-white transition-all duration-500 text-sm font-medium flex items-center gap-2.5 shadow-[0_0_20px_-10px_rgba(0,0,0,0.3)]">
+                Explorar todas las funcionalidades
                 <ArrowRight className="w-4 h-4 text-brand group-hover:translate-x-1 transition-transform" />
             </button>
         </RevealOnScroll>

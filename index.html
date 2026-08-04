@@ -3,11 +3,92 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PAYPER — S.O. para Gastronomía y Café</title>
-    <meta name="description" content="Sistema operativo integral para cafeterías y gastronomía. Flujo, control de stock y KDS.">
+
+    <!-- Consent Mode v2 (PRIMERO que todo, antes de cualquier script) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('consent', 'default', {
+        'analytics_storage': 'granted',
+        'ad_storage': 'denied',
+        'ad_user_data': 'denied',
+        'ad_personalization': 'denied',
+        'wait_for_update': 500
+      });
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KFMWJR7K');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Meta Pixel (Payper Pixel · 2872187926465125) -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '2872187926465125');
+      fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel -->
+
+    <title>Payper App | Payper.io — Sistema Operativo para Cafeterías y Gastronomía en Argentina</title>
+    <meta name="description" content="Payper (payperapp.io) es la app y sistema operativo gastronómico N°1 de Argentina. Payper App para cafeterías y restaurantes: POS ultra-rápido, KDS barista, stock por receta, pedidos QR y fidelización. Probá Payper en payperapp.io">
+
+    <!-- Canonical & Geo Targeting -->
+    <link rel="canonical" href="https://payperapp.io/" />
+    <meta name="language" content="es-AR" />
+    <meta name="geo.region" content="AR-C" />
+    <meta name="geo.placename" content="Ciudad Autónoma de Buenos Aires, Argentina" />
+    <meta name="geo.position" content="-34.6037;-58.3816" />
+    <meta name="ICBM" content="-34.6037, -58.3816" />
+    <link rel="alternate" hreflang="es-AR" href="https://payperapp.io/" />
+    <link rel="alternate" hreflang="es" href="https://payperapp.io/" />
+    <link rel="alternate" hreflang="x-default" href="https://payperapp.io/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://payperapp.io/" />
+    <meta property="og:title" content="Payper App — Sistema Operativo para Cafeterías y Gastronomía en Argentina" />
+    <meta property="og:description" content="POS ultra-rápido, KDS barista, stock por receta, pedidos QR y fidelización. El software gastronómico que eligen los mejores cafés de Argentina." />
+    <meta property="og:image" content="https://payperapp.io/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:site_name" content="Payper" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Payper App — S.O. para Gastronomía en Argentina" />
+    <meta name="twitter:description" content="El sistema operativo que transforma cafeterías. POS, KDS, stock por receta y más. Probalo en payperapp.io" />
+    <meta name="twitter:image" content="https://payperapp.io/og-image.png" />
+    <meta name="twitter:site" content="@payper_io" />
+
+    <!-- Favicon & Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#1E362D" />
+
+    <!-- SEO -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="author" content="Payper Technologies" />
+    <meta name="keywords" content="payper, payper app, payperapp, payperapp.io, payper argentina, payper buenos aires, app payper, descargar payper, payper sistema, payper login, payper io, sistema cafetería, POS gastronomía, software gastronómico argentina, KDS barista, control de stock café, sistema operativo gastronomía" />
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="dns-prefetch" href="https://images.unsplash.com" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -87,8 +168,142 @@
 }
 </script>
 <link rel="stylesheet" href="/index.css">
+
+    <!-- JSON-LD: Organization (brand consolidation across payperapp.io) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://payperapp.io/#organization",
+      "name": "Payper",
+      "legalName": "Payper Technologies",
+      "alternateName": ["Payper App", "PayperApp", "Payper.io", "PayperApp.io", "payperio", "PayperIO", "Payper Argentina"],
+      "url": "https://payperapp.io",
+      "logo": "https://payperapp.io/payper-logo.png",
+      "description": "Payper es la app y sistema operativo gastronómico N°1 de Argentina. Payper App / Payper.io para cafeterías y restaurantes de especialidad: POS, KDS barista, stock por receta y fidelización.",
+      "areaServed": [
+        { "@type": "Country", "name": "Argentina" },
+        { "@type": "City", "name": "Buenos Aires" },
+        { "@type": "City", "name": "Córdoba" },
+        { "@type": "City", "name": "Rosario" },
+        { "@type": "City", "name": "Mendoza" },
+        { "@type": "City", "name": "Mar del Plata" }
+      ],
+      "knowsAbout": [
+        "Sistema POS cafetería",
+        "KDS barista",
+        "Control de stock por receta",
+        "Pedidos QR gastronomía",
+        "Software gestión restaurantes Argentina",
+        "Fidelización clientes",
+        "Sistema cashless eventos"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Buenos Aires",
+        "addressCountry": "AR"
+      },
+      "sameAs": [
+        "https://payperapp.io",
+        "https://instagram.com/payper.io",
+        "https://instagram.com/payperapp.io",
+        "https://twitter.com/payper_io",
+        "https://x.com/payper_io"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "availableLanguage": "Spanish",
+        "areaServed": "AR"
+      }
+    }
+    </script>
+
+    <!-- JSON-LD: WebSite (sitelinks search box + brand variants) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://payperapp.io/#website",
+      "name": "Payper",
+      "alternateName": ["Payper App", "PayperApp", "Payper.io", "PayperApp.io", "payperio", "PayperIO", "Payper Argentina"],
+      "url": "https://payperapp.io",
+      "inLanguage": "es-AR",
+      "publisher": { "@id": "https://payperapp.io/#organization" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://payperapp.io/?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+
+    <!-- JSON-LD: Brand -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Brand",
+      "@id": "https://payperapp.io/#brand",
+      "name": "Payper",
+      "alternateName": ["Payper App", "PayperApp", "Payper.io", "PayperApp.io", "payperio", "PayperIO", "Payper Argentina"],
+      "logo": "https://payperapp.io/payper-logo.png",
+      "slogan": "El sistema operativo gastronómico de Argentina",
+      "url": "https://payperapp.io"
+    }
+    </script>
+
+    <!-- JSON-LD: SoftwareApplication -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "@id": "https://payperapp.io/#software",
+      "name": "Payper",
+      "alternateName": ["Payper App", "PayperApp", "Payper.io", "PayperApp.io", "payperio", "PayperIO"],
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web, iOS, Android",
+      "url": "https://payperapp.io/",
+      "description": "Sistema operativo integral para cafeterías y gastronomía en Argentina. POS, KDS, control de stock por receta y fidelización automática.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "ARS",
+        "availability": "https://schema.org/InStock",
+        "description": "Demo gratuita disponible"
+      },
+      "provider": { "@id": "https://payperapp.io/#organization" },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "320",
+        "bestRating": "5"
+      },
+      "featureList": [
+        "POS ultra-rápido",
+        "KDS para baristas",
+        "Control de stock por receta",
+        "Pedidos QR sin app",
+        "Fidelización automática",
+        "Métricas de negocio en tiempo real",
+        "Arquitectura Offline-First",
+        "Gestión multi-sucursal"
+      ]
+    }
+    </script>
+
 </head>
   <body class="bg-[#1E362D] text-[#F7F6F2] antialiased selection:bg-[#C9A66B] selection:text-[#1E362D]">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KFMWJR7K"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Meta Pixel (noscript) -->
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2872187926465125&ev=PageView&noscript=1"
+    alt="" /></noscript>
+    <!-- End Meta Pixel (noscript) -->
+
     <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
 </body>

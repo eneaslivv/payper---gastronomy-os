@@ -107,31 +107,32 @@ const Hero: React.FC = () => {
   };
 
   return (
-    <header className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-forest">
+    <header className="relative pt-36 pb-24 lg:pt-52 lg:pb-36 overflow-hidden bg-forest">
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#000000_1px,transparent_1px),linear-gradient(to_bottom,#000000_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none opacity-20"></div>
-      <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[radial-gradient(circle,rgba(201,166,107,0.15)_0%,transparent_70%)] blur-[100px] rounded-full pointer-events-none animate-glow"></div>
+      <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[900px] h-[500px] bg-[radial-gradient(circle,rgba(201,166,107,0.12)_0%,transparent_60%)] blur-[100px] rounded-full pointer-events-none animate-glow"></div>
+      <div className="absolute top-[10%] right-[10%] w-[300px] h-[300px] bg-[radial-gradient(circle,rgba(201,166,107,0.08)_0%,transparent_70%)] blur-[80px] rounded-full pointer-events-none"></div>
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3/4 h-[1px] bg-gradient-to-r from-transparent via-bone/10 to-transparent"></div>
 
       <div className="relative max-w-5xl mx-auto px-6 text-center z-10">
         <RevealOnScroll delay={100}>
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-bone/[0.03] bg-white/[0.01] text-bone text-[10px] font-medium mb-10 backdrop-blur-md hover:border-brand/30 transition-all cursor-default shadow-none group mx-auto">
-            <span className="relative flex h-1.5 w-1.5">
+          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-brand/10 bg-brand/[0.04] text-bone text-[10px] font-medium mb-12 backdrop-blur-md hover:border-brand/30 hover:bg-brand/[0.08] transition-all duration-500 cursor-default shadow-[0_0_20px_-10px_rgba(201,166,107,0.15)] group mx-auto">
+            <span className="relative flex h-2 w-2">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-brand"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-brand"></span>
             </span>
-            <span className="tracking-wider uppercase bg-gradient-to-r from-bone/40 to-bone/20 bg-clip-text text-transparent group-hover:to-white transition-all">
-              SOLUCIÓN INTEGRAL PARA GASTRONOMÍA
+            <span className="tracking-[0.15em] uppercase text-bone/50 group-hover:text-bone/80 transition-colors font-semibold">
+              PAYPER — SOLUCIÓN INTEGRAL PARA GASTRONOMÍA
             </span>
           </div>
         </RevealOnScroll>
 
         <RevealOnScroll delay={200}>
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-normal text-bone/80 tracking-tight mb-8 leading-[1.05] md:leading-[0.95]">
-            El flujo perfecto para tu <br />
+          <h1 className="text-5xl md:text-7xl lg:text-[5.5rem] font-normal text-bone/85 tracking-tight mb-10 leading-[1.08] md:leading-[0.98]">
+            Payper: el sistema operativo <br />
             <span className="relative inline-block">
               <span className="text-transparent bg-clip-text bg-gradient-to-b from-bone/80 via-bone/70 to-bone/30 relative z-10">
-                barra de café.
+                para tu barra de café.
               </span>
               <span className="absolute inset-0 bg-gradient-to-r from-brand/0 via-brand/10 to-brand/0 blur-3xl -z-10 opacity-20 transform scale-y-50 translate-y-4"></span>
             </span>
@@ -139,18 +140,18 @@ const Hero: React.FC = () => {
         </RevealOnScroll>
 
         <RevealOnScroll delay={300}>
-          <p className="text-base md:text-lg text-bone/50 max-w-xl mx-auto mb-12 leading-relaxed font-light tracking-wide">
-            Olvidate de las comandas perdidas y el descontrol de insumos. Centralizá pedidos, <span className="text-bone/90 font-normal border-b border-brand/30 pb-0.5">recetas exactas</span> y cobros en una plataforma diseñada para que tu operación nunca se detenga.
+          <p className="text-base md:text-lg text-bone/45 max-w-lg mx-auto mb-14 leading-relaxed font-light tracking-wide">
+            Olvidate de las comandas perdidas y el descontrol de insumos. Con la app Payper, centralizá pedidos, <span className="text-bone/90 font-normal border-b border-brand/30 pb-0.5">recetas exactas</span> y cobros en una plataforma diseñada para cafeterías y gastronomía en Argentina.
           </p>
         </RevealOnScroll>
 
         <RevealOnScroll delay={400}>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-28">
-            <button className="group h-10 px-6 bg-bone text-forest font-medium rounded-full text-[13px] hover:bg-white hover:shadow-[0_0_25px_-5px_rgba(255,255,255,0.3)] transition-all flex items-center justify-center gap-2">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-32">
+            <button aria-label="Ver demo de Payper App para cafeterías" className="group h-12 px-8 bg-bone text-forest font-semibold rounded-full text-sm hover:bg-white hover:shadow-[0_0_40px_-5px_rgba(255,255,255,0.25)] transition-all duration-300 flex items-center justify-center gap-2.5 shadow-[0_0_30px_-10px_rgba(247,246,242,0.15)]">
               Ver Demo Barista
-              <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform text-brand" />
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300 text-brand" />
             </button>
-            <button className="h-10 px-6 border border-bone/10 text-bone/70 font-medium rounded-full text-[13px] hover:bg-white/5 hover:text-white hover:border-bone/20 transition-all">
+            <button aria-label="Solicitar cotización de Payper para mi local" className="h-12 px-8 border border-bone/[0.12] text-bone/60 font-medium rounded-full text-sm hover:bg-white/[0.06] hover:text-white hover:border-bone/25 transition-all duration-300">
               Cotizar para mi local
             </button>
           </div>
@@ -160,8 +161,9 @@ const Hero: React.FC = () => {
       {/* Diagram Visualization */}
       <RevealOnScroll delay={500} className="w-full">
         <div id="como-funciona" className="max-w-5xl mx-auto px-4">
-          <div className="relative rounded-xl border border-bone/[0.08] bg-charcoal shadow-2xl overflow-visible">
-            <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-bone/10 to-transparent opacity-50"></div>
+          <div className="relative rounded-2xl border border-bone/[0.08] bg-charcoal shadow-[0_25px_60px_-15px_rgba(0,0,0,0.5)] overflow-visible">
+            <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-brand/20 to-transparent"></div>
+            <div className="absolute -top-px inset-x-[20%] h-[2px] bg-gradient-to-r from-transparent via-brand/30 to-transparent blur-sm"></div>
 
             <div ref={containerRef} className="pt-12 pb-12 md:pt-40 md:pb-28 relative flex justify-center items-center">
               {/* Soft Vignettes */}
@@ -207,19 +209,19 @@ const Hero: React.FC = () => {
             </div>
 
             {/* METRICS BAR */}
-            <div className="grid grid-cols-3 border-t border-bone/[0.06] bg-[#151515]">
-              <div className="py-5 text-center border-r border-bone/[0.06]">
-                <div className="text-[9px] text-bone/30 uppercase tracking-[0.15em] font-semibold mb-1.5">Uptime</div>
-                <div className="text-[13px] font-mono text-brand">99.99%</div>
+            <div className="grid grid-cols-3 border-t border-bone/[0.06] bg-[#121212] rounded-b-2xl">
+              <div className="py-6 text-center border-r border-bone/[0.06] group/metric hover:bg-white/[0.02] transition-colors">
+                <div className="text-[9px] text-bone/25 uppercase tracking-[0.2em] font-semibold mb-2">Uptime</div>
+                <div className="text-sm font-mono text-brand font-medium">99.99%</div>
               </div>
-              <div className="py-5 text-center border-r border-bone/[0.06]">
-                <div className="text-[9px] text-bone/30 uppercase tracking-[0.15em] font-semibold mb-1.5">Sync Time</div>
-                <div className="text-[13px] font-mono text-bone/90">&lt;50ms</div>
+              <div className="py-6 text-center border-r border-bone/[0.06] group/metric hover:bg-white/[0.02] transition-colors">
+                <div className="text-[9px] text-bone/25 uppercase tracking-[0.2em] font-semibold mb-2">Sync Time</div>
+                <div className="text-sm font-mono text-bone/90 font-medium">&lt;50ms</div>
               </div>
-              <div className="py-5 text-center">
-                <div className="text-[9px] text-bone/30 uppercase tracking-[0.15em] font-semibold mb-1.5">Mode</div>
-                <div className="text-[13px] font-mono text-emerald-500/90 flex items-center justify-center gap-2">
-                  <span className="w-1 h-1 rounded-full bg-emerald-500 shadow-[0_0_5px_rgba(16,185,129,0.8)]"></span>
+              <div className="py-6 text-center group/metric hover:bg-white/[0.02] transition-colors">
+                <div className="text-[9px] text-bone/25 uppercase tracking-[0.2em] font-semibold mb-2">Mode</div>
+                <div className="text-sm font-mono text-emerald-500/90 flex items-center justify-center gap-2 font-medium">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 shadow-[0_0_8px_rgba(16,185,129,0.8)]"></span>
                   Offline-First
                 </div>
               </div>

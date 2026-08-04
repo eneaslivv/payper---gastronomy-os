@@ -7,10 +7,11 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#050B08] text-bone border-t border-white/[0.05] relative overflow-hidden pt-20">
-      
+    <footer className="bg-[#050B08] text-bone border-t border-white/[0.05] relative overflow-hidden pt-24">
+
       {/* Background Glow */}
       <div className="absolute bottom-0 left-1/4 w-[500px] h-[300px] bg-brand/5 blur-[120px] rounded-full pointer-events-none"></div>
+      <div className="absolute top-[20%] right-[10%] w-[300px] h-[200px] bg-brand/[0.03] blur-[80px] rounded-full pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         
@@ -42,7 +43,7 @@ const Footer: React.FC = () => {
                 <span className="text-lg font-medium tracking-tight text-white">PAYPER</span>
             </div>
             <p className="text-bone/50 text-sm leading-relaxed max-w-xs mb-6">
-                El sistema operativo que transforma la experiencia de tu cafetería. Menos filas, más conexión, cero fricción.
+                Payper App es el sistema operativo que transforma la experiencia de tu cafetería en Argentina. POS, KDS, stock por receta y fidelización. Menos filas, más conexión, cero fricción.
             </p>
             <div className="flex gap-4">
                 <a href="#" className="w-10 h-10 rounded-full bg-white/[0.03] flex items-center justify-center hover:bg-brand hover:text-white transition-all duration-300">
@@ -105,14 +106,24 @@ const Footer: React.FC = () => {
 
         </div>
 
+        {/* Ecosistema Payper - Cross-link al producto de eventos */}
+        <RevealOnScroll delay={450}>
+          <div className="border-t border-white/[0.05] py-8">
+            <h4 className="text-white font-medium mb-3 text-sm">Ecosistema Payper</h4>
+            <p className="text-bone/50 text-sm leading-relaxed max-w-3xl">
+              Payper.io es el sistema operativo gastronómico para cafeterías y restaurantes de especialidad en Argentina. ¿Organizás eventos, festivales o gestionás un boliche? Conocé también <a href="https://payperapp.io/" rel="noopener" className="text-bone/80 underline decoration-dotted underline-offset-4 hover:text-brand transition-colors">Payper App — Sistema Cashless en payperapp.io</a>. Una sola marca, dos productos: Payper.
+            </p>
+          </div>
+        </RevealOnScroll>
+
         {/* Bottom Bar */}
         <RevealOnScroll delay={500}>
           <div className="border-t border-white/[0.05] py-8 flex flex-col md:flex-row justify-between items-center gap-4">
               <p className="text-xs text-bone/30">
-                  &copy; {currentYear} Payper Technologies Inc. Todos los derechos reservados.
+                  &copy; {currentYear} Payper Technologies — Payper.io · Payper App · PayperApp. Todos los derechos reservados.
               </p>
               <div className="flex items-center gap-6">
-                  <a href="#" className="text-xs text-bone/30 hover:text-white transition-colors">Designed in Buenos Aires</a>
+                  <a href="#" className="text-xs text-bone/30 hover:text-white transition-colors">Diseñado y operado desde Buenos Aires, Argentina</a>
               </div>
           </div>
         </RevealOnScroll>

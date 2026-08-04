@@ -14,6 +14,7 @@ const CTA: React.FC = () => {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   // Validation Logic
   const validateField = (name: string, value: string) => {
@@ -48,9 +49,9 @@ const CTA: React.FC = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Final validation before submit
     const newErrors: Record<string, string> = {};
     let hasError = false;
@@ -70,20 +71,32 @@ const CTA: React.FC = () => {
       return;
     }
 
-    // Simulate API Call
     setIsSubmitting(true);
-    setTimeout(() => {
-      setIsSubmitting(false);
+    setSubmitError('');
+    try {
+      const res = await fetch('/api/send-gastro-lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
       setIsSuccess(true);
       setFormData({ name: '', email: '', business: '', phone: '' });
-    }, 2000);
+    } catch (err) {
+      console.error('send-gastro-lead failed:', err);
+      setSubmitError('Hubo un error al enviar. Intentá de nuevo en unos minutos.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
-    <section id="pricing" className="py-24 lg:py-32 bg-bone relative overflow-hidden border-t border-stone-200 text-forest">
+    <section id="pricing" className="py-28 lg:py-36 bg-bone relative overflow-hidden border-t border-stone-200 text-forest">
+      <div className="absolute top-[-10%] right-[10%] w-[500px] h-[400px] bg-brand/[0.04] blur-[100px] rounded-full pointer-events-none"></div>
+      <div className="absolute bottom-[-10%] left-[5%] w-[400px] h-[300px] bg-forest/[0.03] blur-[80px] rounded-full pointer-events-none"></div>
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         {/* Main Box */}
-        <div className="grid lg:grid-cols-2 bg-white rounded-3xl overflow-hidden border border-stone-200 shadow-xl">
+        <div className="grid lg:grid-cols-2 bg-white rounded-3xl overflow-hidden border border-stone-200/80 shadow-2xl shadow-stone-300/30">
           
           {/* Left Content (Text) */}
           <RevealOnScroll className="h-full">
@@ -93,13 +106,13 @@ const CTA: React.FC = () => {
                 <span className="text-[10px] font-mono font-medium tracking-widest text-brand uppercase">Core Operating System</span>
                 </div>
 
-                <h2 className="text-4xl lg:text-5xl font-semibold tracking-tighter text-forest mb-6 leading-[0.95]">
-                Control Total.<br />
+                <h2 className="text-4xl lg:text-5xl font-semibold tracking-tight text-forest mb-6 leading-[0.98]">
+                Control total con Payper.<br />
                 <span className="text-stone-400">Cero Fricción.</span>
                 </h2>
 
                 <p className="text-forest/60 font-normal text-lg mb-8 max-w-md leading-relaxed">
-                Sumate a los emprendedores gastronómicos que profesionalizaron su gestión. Completa el formulario y un especialista te contactará para armar un plan a tu medida.
+                Sumate a los emprendedores gastronómicos de Argentina que profesionalizaron su gestión con Payper App. Completa el formulario y un especialista te contactará para armar un plan a tu medida.
                 </p>
 
                 <div className="inline-flex items-center gap-3 px-4 py-3 bg-stone-50 rounded-lg border border-stone-100 max-w-max mt-auto">
@@ -203,10 +216,14 @@ const CTA: React.FC = () => {
                     {errors.phone && <p className="text-[10px] text-red-500 font-medium ml-1">{errors.phone}</p>}
                     </div>
 
-                    <button 
+                    {submitError && (
+                      <p className="text-xs text-red-500 font-medium text-center">{submitError}</p>
+                    )}
+
+                    <button
                     type="submit"
                     disabled={isSubmitting || Object.values(errors).some(e => e !== '') || !formData.email || !formData.name}
-                    className="w-full bg-forest text-white h-12 rounded-xl font-medium text-sm hover:bg-brand transition-all duration-300 shadow-lg hover:shadow-brand/20 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 mt-2"
+                    className="w-full bg-forest text-white h-12 rounded-xl font-semibold text-sm hover:bg-[#15291F] hover:shadow-[0_8px_30px_-10px_rgba(30,54,45,0.5)] transition-all duration-500 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2 mt-2"
                     >
                     {isSubmitting ? (
                         <>

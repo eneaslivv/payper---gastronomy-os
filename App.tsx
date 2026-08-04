@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Architecture from './components/Architecture';
@@ -7,6 +8,9 @@ import Modules from './components/Modules';
 import LifestyleSlider from './components/LifestyleSlider';
 import LiveDemo from './components/LiveDemo';
 import CTA from './components/CTA';
+import Testimonials from './components/Testimonials';
+import FAQ from './components/FAQ';
+import SobrePayper from './components/SobrePayper';
 import Footer from './components/Footer';
 
 const App: React.FC = () => {
@@ -36,11 +40,15 @@ const App: React.FC = () => {
         <Architecture />
         <Modules />
         <LifestyleSlider />
+        <Testimonials />
         <LiveDemo />
         <CTA />
+        <FAQ />
+        <SobrePayper />
       </main>
       
       <Footer />
+      <Analytics />
     </div>
   );
 };

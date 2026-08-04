@@ -129,26 +129,27 @@ const LiveDemo: React.FC = () => {
   };
 
   return (
-    <section id="demo" className="py-24 bg-[#111] relative overflow-hidden text-bone border-t border-white/[0.06]">
+    <section id="demo" className="py-28 lg:py-36 bg-[#111] relative overflow-hidden text-bone border-t border-white/[0.06]">
       {/* Background Decor */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-[#1E362D]/20 to-transparent pointer-events-none"></div>
+      <div className="absolute bottom-[10%] left-[5%] w-[400px] h-[300px] bg-brand/[0.04] blur-[100px] rounded-full pointer-events-none"></div>
       
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-16">
           <RevealOnScroll>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand/20 bg-brand/5 text-brand text-[10px] font-medium mb-6 uppercase tracking-widest mx-auto">
                 <Smartphone className="w-3 h-3" />
-                <span>Interactive Demo</span>
+                <span>Demo Interactiva de Payper</span>
             </div>
           </RevealOnScroll>
           <RevealOnScroll delay={100}>
             <div className="flex flex-col items-center">
                 <h2 className="text-4xl md:text-5xl font-medium tracking-tight mb-4 text-white">
-                    Pruébalo tú mismo. <br/>
+                    Probá la app Payper en vivo. <br/>
                     <span className="text-brand serif italic">Causa y efecto real.</span>
                 </h2>
                 <button className="bg-brand text-white px-6 py-2 rounded-full font-bold text-sm hover:bg-white hover:text-brand transition-all shadow-[0_0_20px_-5px_rgba(201,166,107,0.5)] mb-6 animate-pulse-slow">
-                    Start Free Trial
+                    Comenzá tu prueba gratis
                 </button>
             </div>
           </RevealOnScroll>
@@ -175,7 +176,7 @@ const LiveDemo: React.FC = () => {
                 <div className="w-full h-full bg-[#F7F6F2] text-charcoal flex flex-col animate-in fade-in duration-500">
                   {/* Header Image */}
                   <div className="h-40 relative flex-shrink-0">
-                      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=600&auto=format&fit=crop" className="w-full h-full object-cover" alt="Cover" />
+                      <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=600&auto=format&fit=crop" className="w-full h-full object-cover" alt="Menú digital de Payper App para cafetería" />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
                       <div className="absolute bottom-4 left-4 text-white">
                           <h3 className="font-bold text-xl leading-tight">{restaurantName}</h3>
@@ -284,7 +285,7 @@ const LiveDemo: React.FC = () => {
                           <span>${cartTotal.toFixed(2)}</span>
                        </div>
                        <div className="flex justify-between text-sm text-gray-500">
-                          <span>Service Fee</span>
+                          <span>Cargo por servicio</span>
                           <span>$0.00</span>
                        </div>
                        <div className="flex justify-between text-lg font-bold text-gray-900 pt-2">
@@ -371,7 +372,7 @@ const LiveDemo: React.FC = () => {
                     >
                          <div className="flex items-center justify-center gap-2">
                             <BarChart3 className="w-3.5 h-3.5" />
-                            Live Orders
+                            Pedidos en Vivo
                             {/* Notification Dot */}
                             <span className="relative flex h-2 w-2 ml-1">
                               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
@@ -450,7 +451,7 @@ const LiveDemo: React.FC = () => {
                                     <div className="text-xs text-white/40 uppercase tracking-wide mb-1">Pedidos</div>
                                     <div className="text-2xl font-bold text-white">{orders.length}</div>
                                     <div className="text-[10px] text-emerald-400 mt-1 flex items-center gap-1">
-                                        <Clock className="w-3 h-3" /> Updated just now
+                                        <Clock className="w-3 h-3" /> Actualizado ahora
                                     </div>
                                 </div>
                              </div>
@@ -461,7 +462,7 @@ const LiveDemo: React.FC = () => {
                                   <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
                                   Pedidos Entrantes
                                 </h3>
-                                <span className="text-[10px] text-white/20 font-mono">Real-time WebSocket</span>
+                                <span className="text-[10px] text-white/20 font-mono">Tiempo real — WebSocket</span>
                              </div>
 
                              {/* LIVE FEED LIST */}

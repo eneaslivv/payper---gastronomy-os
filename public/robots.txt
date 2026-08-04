@@ -1,0 +1,26 @@
+# Payper — Sistema Operativo Gastronómico Argentina
+# https://payper.io · https://payperapp.io
+# Ecosistema Payper: Payper App, PayperApp, Payper.io, PayperApp.io
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /.env
+
+# Permitir acceso explícito a buscadores principales
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+Sitemap: https://payper.io/sitemap.xml

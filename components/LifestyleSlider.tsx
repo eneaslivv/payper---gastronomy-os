@@ -25,28 +25,30 @@ const images = [
 
 const LifestyleSlider: React.FC = () => {
   return (
-    <section className="py-32 bg-forest border-t border-white/[0.06] overflow-hidden relative group/section">
+    <section className="py-32 lg:py-40 bg-forest border-t border-white/[0.06] overflow-hidden relative group/section">
       {/* Background Noise Texture */}
       <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{ filter: 'url(#noiseFilter)' }}></div>
+      <div className="absolute top-[20%] right-0 w-[400px] h-[300px] bg-brand/[0.04] blur-[100px] rounded-full pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-6 mb-16 relative z-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
         <div>
            <RevealOnScroll>
             <div className="flex items-center gap-2 mb-3">
                 <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
-                <span className="text-[10px] font-mono uppercase tracking-widest text-brand">Live Feed</span>
+                <span className="text-[10px] font-mono uppercase tracking-widest text-brand">Payper en vivo</span>
             </div>
            </RevealOnScroll>
            <RevealOnScroll delay={100}>
             <h2 className="text-3xl md:text-5xl font-medium text-bone tracking-tight leading-none">
                 Cashless Nights. <br/>
                 <span className="text-brand serif italic">Timeless Vibes.</span>
+                <span className="sr-only">Payper App en los mejores cafés y bares de Argentina</span>
             </h2>
            </RevealOnScroll>
         </div>
         <RevealOnScroll delay={200} className="hidden md:block">
             <p className="text-bone/40 text-sm font-light max-w-xs text-right">
-            La experiencia Payper en los mejores spots de la ciudad. 
+            La experiencia Payper App en los mejores spots de Argentina.
             Tecnología invisible para momentos reales.
             </p>
         </RevealOnScroll>
@@ -66,7 +68,7 @@ const LifestyleSlider: React.FC = () => {
                 <div className="w-full h-full overflow-hidden bg-charcoal">
                     <img 
                     src={item.src} 
-                    alt={`Lifestyle shot ${index}`} 
+                    alt={`Payper App en acción - ${item.loc}: experiencia gastronómica cashless en Argentina`}
                     className="w-full h-full object-cover transition-transform duration-1000 ease-in-out group-hover:scale-110 grayscale-[40%] group-hover:grayscale-0 brightness-[0.8] group-hover:brightness-100"
                     loading="lazy"
                     />
